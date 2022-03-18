@@ -1,0 +1,13 @@
+$theme-colors: (
+  "primary":   #2f3135 ,
+  "info": #4bf185
+  
+  
+) !default;
+
+$input-bg:#2f3135;
+$input-border-color: #2f3135;
+
+@import "./../node_modules/bootstrap/scss/bootstrap";
+
+
