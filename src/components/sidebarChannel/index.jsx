@@ -1,11 +1,23 @@
-import React from 'react'
-import {FaHashtag} from "react-icons/fa"
 
-function SidebarChannel() {
+import React from 'react'
+import { FaHashtag } from "react-icons/fa"
+import { useDispatch } from 'react-redux'
+import { setChannelInfo} from '../../features/appSlice'
+
+
+function SidebarChannel({ channel }) {
+
+ const dispatch= useDispatch()
   return (
-    <div className='h-25'>
-        <p className="text-light mt-4"><FaHashtag style={{color:"#ffff"}} ></FaHashtag> Youtube</p>
-        
+    <div onClick={()=>{
+      dispatch(setChannelInfo({
+          channelId:channel.id,
+          channelName:channel.channel.channelName
+      }))
+    }}>
+      <p className="text-light "><FaHashtag style={{ color: "#ffff" }} >
+        </FaHashtag> {channel.channel.channelName}</p>
+
     </div>
   )
 }

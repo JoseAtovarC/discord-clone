@@ -7,11 +7,15 @@ import {MdPeopleAlt} from "react-icons/md"
 import {MdSend} from "react-icons/md"
 import {FiHelpCircle} from "react-icons/fi"
 
-function ChatHeader() {
+
+
+function ChatHeader({name}) {
+
+
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg="dark" expand="lg" >
   <Container fluid>
-  <h3 className="text-light mt-4"><FaHashtag style={{color:"#ffff"}} ></FaHashtag> Youtube</h3>
+  <h3 className="text-light mt-4"><FaHashtag style={{color:"#ffff"}} ></FaHashtag> {name}</h3>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -21,8 +25,8 @@ function ChatHeader() {
       >
         
       </Nav>
-      <Form className="d-flex">
-          <BsFillBellFill className='m-2' style={{color:"#ffff",fontSize:"2rem"}}></BsFillBellFill>
+      <Form className="d-flex w-75">
+          <BsFillBellFill className='m-2 ' style={{color:"#ffff",fontSize:"2rem"}}></BsFillBellFill>
           <MdEditLocation className='m-2' style={{color:"#ffff",fontSize:"2rem"}}></MdEditLocation>
           <MdPeopleAlt className='m-2' style={{color:"#ffff",fontSize:"2rem"}}></MdPeopleAlt>
         <FormControl
